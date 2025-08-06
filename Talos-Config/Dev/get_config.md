@@ -10,16 +10,16 @@ talosctl gen config zalewski-dev-cluster https://10.0.30.131:6443 \
   --output rendered/
 
 
-# Set the TALOSCONFIG environment variable to point to the generated configuration
-# This is where talosctl will look for the configuration files
-# Adjust the path as necessary based on your directory structure
+## Set the TALOSCONFIG environment variable to point to the generated configuration
+## This is where talosctl will look for the configuration files
+## Adjust the path as necessary based on your directory structure
 export TALOSCONFIG=./rendered/talosconfig
 
 
 # Apply the control plane configuration
-  # This assumes you have a control plane node at 10.0.30.131
+  ## This assumes you have a control plane node at 10.0.30.131
 talosctl apply -f rendered/controlplane.yaml -n 10.0.30.131 --insecure
 
 # Apply the worker node configuration
-  # This assumes you have a worker node at 10.0.30.132
+  ## This assumes you have a worker node at 10.0.30.132
 talosctl apply -f rendered/worker.yaml -n 10.0.30.132 --insecure
