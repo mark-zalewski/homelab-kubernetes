@@ -7,7 +7,8 @@
   --config-patch @patches/install-disk.yaml \
   --config-patch @patches/interface-names.yaml \
   --config-patch-control-plane @patches/vip.yaml \
-  --output rendered/```
+  --output rendered/
+  ```
 
 
 ## Set the TALOSCONFIG environment variable to point to the generated configuration
