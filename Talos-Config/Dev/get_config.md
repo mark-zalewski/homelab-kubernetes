@@ -30,3 +30,20 @@ talosctl apply -f rendered/controlplane.yaml -n 10.0.30.131 --insecure
 ```
 talosctl apply -f rendered/worker.yaml -n 10.0.30.132 --insecure
 ```
+
+# Set the Talos endpoint to the control plane node
+### $CONTROL_PLANE_IP is the IP address of your control plane node, e.g., 10.0.30.131
+```
+export TALOSCONFIG="_out/talosconfig"
+talosctl config endpoint $CONTROL_PLANE_IP
+talosctl config node $CONTROL_PLANE_IP
+```
+
+# Bootstrap the cluster
+```
+talosctl bootstrap
+```
+# Retrieve the kubeconfig file to interact with the Kubernetes cluster
+```
+talosctl kubeconfig .
+``` 
