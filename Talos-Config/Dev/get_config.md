@@ -13,7 +13,7 @@ talosctl gen config zalewski-dev-cluster https://10.0.30.131:6443 \
 ## Set the TALOSCONFIG environment variable to point to the generated configuration
 ### This is where talosctl will look for the configuration files
 ### Adjust the path as necessary based on your directory structure
-export TALOSCONFIG=./rendered/talosconfig
+Inline code: `export TALOSCONFIG=./rendered/talosconfig`
 
 
 # Apply the control plane configuration
