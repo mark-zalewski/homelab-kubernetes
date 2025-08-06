@@ -1,5 +1,5 @@
 # Talos Configuration Generation and Application  
-`talosctl gen config zalewski-dev-cluster https://10.0.30.131:6443 \
+```talosctl gen config zalewski-dev-cluster https://10.0.30.131:6443 \
   --with-secrets secrets.yaml \
   --config-patch @patches/allow-controlplane-workloads.yaml \
   --config-patch @patches/cni.yaml \
@@ -7,7 +7,7 @@
   --config-patch @patches/install-disk.yaml \
   --config-patch @patches/interface-names.yaml \
   --config-patch-control-plane @patches/vip.yaml \
-  --output rendered/`
+  --output rendered/```
 
 
 ## Set the TALOSCONFIG environment variable to point to the generated configuration
